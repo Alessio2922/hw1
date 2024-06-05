@@ -1,0 +1,604 @@
+:root {
+    --sura: "Sura", serif;
+    --colorN: #F8B822;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* FONT */
+.sura-regular {
+    font-family: "Sura", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.sura-bold {
+    font-family: "Sura", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+
+/* Immagini a scorrimento nell'header */
+#headerSlide {
+    max-width: 100%;
+    height: 650px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.slide1 {
+    background-image: url(mhw3-img/slide1.jpg);
+}
+
+.slide2 {
+    background-image: url(mhw3-img/slide2.jpg);
+}
+
+.slide3 {
+    background-image: url(mhw3-img/slide3.png);
+}
+
+.slide4 {
+    background-image: url(mhw3-img/slide4.webp);
+}
+
+.slide5 {
+    background-image: url(mhw3-img/slide5.jpeg);
+}
+
+/* Visualizzazione logo, menù e sfondo */
+header #contenitore {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    font-size: 14px;
+    padding: 20px;
+    margin: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#logo-home {
+    width: 150px;
+    height: auto;
+    transition: width 0.3s ease;
+}
+
+#logo-home:hover {
+    width: 200px;
+}
+
+/* Stile meù - Interattivo */
+.button {
+    font-family: var(--sura);
+    font-weight: 400;
+    font-size: large;
+    font-style: normal;
+    margin: 15px;
+    color: var(--colorN);
+    text-shadow: 0 0 100px black;
+}
+
+.sidebar .button {
+    width: 100%;
+}
+
+/* Menù a tendina */
+.burger div {
+    display: flex;
+    width: 50px;
+    height: 3px;
+    background-color: var(--colorN);
+    margin: 5px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+#logo-home,
+a,
+.burger {
+    cursor: pointer;
+}
+
+/* Stile button con proprietà :hover */
+.button:hover {
+    font-weight: 800;
+    color: var(--colorN);
+    text-transform: uppercase;
+    border-width: 100px;
+    border-radius: 80px 80px 80px 80px;
+}
+
+/* Creazione del contenitore per i sotto-menù */
+.new-contenitore {
+    position: relative;
+    height: 120px;
+    background-color: var(--colorN);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Sezione Accedi */
+#contenitore {
+    display: flex;
+    align-items: center;
+    /* Allinea verticalmente al centro, se necessario */
+}
+
+#logout {
+    margin-left: 10px;
+    /* Aggiunge spazio tra "Hello nomeUtente" e "Logout" */
+}
+
+
+/* Discography, Merch, Videos, Mailing List, See All */
+strong {
+    position: static;
+    color: black;
+    font-size: 40px;
+    margin-left: 20px;
+}
+
+.new-contenitore div {
+    margin-right: auto;
+    /* Spinge il testo "MERCH" a sinistra */
+}
+
+/* See All */
+.new-button {
+    color: var(--colorN);
+    background-color: black;
+    font-size: 18px;
+    border-radius: 10px;
+    margin-right: 20px;
+    padding: 0 3px 0 3px;
+    transition: font-size 0.3 ease;
+    transition: background-color 0.3 ease;
+}
+
+/* See All:hover */
+.new-button:hover {
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Contenitore per le immagini - colonne */
+.gallery {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+    background-color: black;
+    margin-top: 0;
+}
+
+
+/* Disposizione immagini */
+.row {
+    display: flex;
+}
+
+
+/* Album foto - Modali */
+#album-view img {
+    padding: 5px;
+    height: 220px;
+    width: 220px;
+    margin: 5px 100px 5px 100px;
+
+}
+
+#modal-view {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: purple;
+}
+
+#modal-view img {
+    height: 80%;
+    width: 40%;
+}
+
+#modal-view.hidden-modal {
+    display: none;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+
+/* Proprietà immagini  */
+.cella {
+    flex: 1;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+/* Dimensioni immagini */
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* Posizione didascalia */
+.imgdidascalia {
+    position: relative;
+    margin: 0 20px 100px 0;
+}
+
+/* Struttura didascalia */
+.didascalia {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Sezione video */
+.video-dim {
+    width: 100%;
+    height: 550px;
+    position: relative;
+
+
+}
+
+.video-dim video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Footer mailing list */
+footer {
+
+    background-color: rgb(31, 31, 31);
+    background-size: cover;
+    height: 500px;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+
+}
+
+#footer-data {
+    display: none;
+}
+
+/* Stili per il pulsante "Vedi altro" */
+#vedi-altro {
+    background-color: #000;
+    color: #F8B822;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Stili quando il cursore si posiziona sopra il pulsante */
+#vedi-altro:hover {
+    background-color: #ec971f;
+    color: black;
+    text-transform: uppercase;
+    font: bold;
+}
+
+/* Stili quando il pulsante è attivo (cliccato) */
+#vedi-altro:active {
+    background-color: #d58512;
+    color: black;
+    font-weight: 500px;
+    border-width: 4px;
+}
+
+.footer-content {
+    display: flex;
+    padding: 100px 0 0;
+}
+
+
+.footer-section {
+    flex: 1 1 300px;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    font-size: 14px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-transform: uppercase;
+    font-size: large;
+    font: 25px;
+    color: var(--colorN);
+}
+
+.footer-bottom {
+    padding-top: 180px;
+}
+
+h3 {
+    color: var(--colorN);
+}
+
+/* API Spotify */
+#album-viewAPI {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+#album-viewAPI .albumAPI {
+    margin: 10px;
+    border: 1px solid slategray;
+    padding: 5px;
+    max-width: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+h1,
+#search-formAPI,
+#album-viewAPI {
+    margin: 0 auto 20px;
+    width: 50%;
+    text-align: center;
+
+}
+
+/* API The Guardian */
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#article-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    margin-bottom: 20px;
+}
+
+.article {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+}
+
+/* Pulsante TORNA SU */
+
+
+/* Versione Mobile */
+@media only screen and (max-width: 700px) {
+
+    header {
+        height: 300px;
+        justify-content: space-between;
+    }
+
+    #contenitore {
+        display: flex;
+        flex-direction: column;
+        align-items: right;
+        justify-content: space-between;
+    }
+
+    .button {
+        display: none;
+    }
+
+    .button.active {
+        flex-direction: column;
+        align-items: right;
+        justify-content: flex-start;
+        top: 0;
+        right: 0;
+        height: auto;
+        width: 250px;
+
+        background-color: rgba(248, 184, 34, 0.1);
+        backdrop-filter: blur(10px);
+
+        display: flex;
+    }
+
+    .burger div {
+        display: flex;
+        width: 27px;
+        height: 4px;
+        background-color: #F8B822;
+        margin: 5px;
+        cursor: pointer;
+    }
+
+    .logo-container,
+    .button-container {
+        display: flex;
+    }
+
+    .button-container {
+        margin-top: 10px;
+    }
+
+    .button {
+        margin: 0 10px;
+    }
+
+    .button {
+        font-family: var(--sura);
+        font-weight: 400;
+        font-size: 15px;
+        font-style: normal;
+        color: white;
+        text-align: center;
+        text-shadow: 0 0 100px black;
+    }
+
+    .merch {
+        display: flex;
+        flex-direction: row;
+        background-color: black;
+        padding: 20px;
+        margin-top: 0;
+        padding-right: 0;
+    }
+
+
+    .imgdidascalia {
+        position: relative;
+        margin-right: 10px;
+    }
+
+    .didascalia {
+        position: absolute;
+        top: calc(25% - 20px);
+        left: calc(25% - 100px);
+        margin-top: 40px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #F8B822;
+        padding: 2px 5px;
+        font-size: 10px;
+        text-align: center;
+        margin-left: 100px;
+    }
+
+    #album-view img {
+        padding: 5px;
+        height: 220px;
+        width: 220px;
+        margin: 5px 100px 5px 100px;
+
+    }
+
+    #modal-view {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 2;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #modal-view img {
+        height: 50%;
+        width: 70%;
+    }
+
+    #modal-view.hidden-modal {
+        display: none;
+    }
+
+    .no-scroll {
+        overflow: hidden;
+    }
+
+    .container {
+        max-width: 90%;
+        margin: 20px auto;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    #article-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        margin-bottom: 20px;
+
+    }
+
+    .article {
+        margin-bottom: 20px;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 5px;
+
+    }
+}
