@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='style.css'>
+    <script src='gallery.js' defer></script>
+    <title> Gallery </title>
+</head>
+
+<body>
+
+    <section id="ricerca">
+        <form name='gallery'>
+            <h1>Cosa vuoi cercare?</h1>
+            <input type="text" name="search" id="searchbox" placeholder="Inserire Nome Album/Autore">
+            <div class="unsplash">Powered by Spotify<img src='./img/spotify.svg'></div>
+        </form>
+    </section>
+
+    <section id='errore' class='hidden'>
+        <p> Nessun risultato </p>
+    </section>
+
+
+    <section class="container">
+        <div id="results">
+        </div>
+    </section>
+
+    <section id="modale" class="hidden">
+
+    </section>
+
+</body>
+
+</html>
