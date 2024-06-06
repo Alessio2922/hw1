@@ -189,8 +189,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // OAuth credentials 
-    const client_id = "87992b0ba33e4a30b67d835e6cda9aab";
-    const client_secret = "b95da579b8af4ff5886271db429c1c4f";;
+    const client_id = "X";
+    const client_secret = "X";;
     // Dichiara variabile token
     let token;
     // All"apertura della pagina, richiediamo il token
